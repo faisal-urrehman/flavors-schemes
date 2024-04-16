@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "143486205905",
+    "project_id": "learning-flavors",
+    "storage_bucket": "learning-flavors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143486205905:android:80515849889baac1dfeaf0",
+        "android_client_info": {
+          "package_name": "com.awesomeproject.production"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQdiDPVoh-qgIJWtFji2QD1mMO5aQIfek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143486205905:android:139d777ee14a8c47dfeaf0",
+        "android_client_info": {
+          "package_name": "com.awesomeproject.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQdiDPVoh-qgIJWtFji2QD1mMO5aQIfek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
