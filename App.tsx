@@ -13,6 +13,7 @@ import {
   ScrollView,
   StatusBar,
   Text,
+  View,
   useColorScheme,
 } from 'react-native';
 import Config from 'react-native-config';
@@ -45,18 +46,9 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-      </ScrollView>
-      <Text>Only for prod: {Config.ENV}</Text>
-    </SafeAreaView>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>ENV: {Config.ENV}</Text>
+    </View>
   );
 }
 
