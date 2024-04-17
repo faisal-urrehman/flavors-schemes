@@ -9,6 +9,8 @@
     "android:staging:release": "cd android && ./gradlew assembleStagingRelease",
     "android:prod:debug": "react-native run-android --mode=productionDebug --appIdSuffix=production",
     "android:prod:release": "cd android && ./gradlew assembleProductionRelease",
+    "android:staging:codepush": "appcenter codepush release-react -a faisalur.rehman-dubizzlelabs.com/Learning-Staging -d Staging",
+    "android:prod:codepush": "appcenter codepush release-react -a faisalur.rehman-dubizzlelabs.com/Learning-Staging -d Production",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
@@ -20,6 +22,7 @@
     "@react-native-firebase/messaging": "^19.2.2",
     "react": "18.2.0",
     "react-native": "0.73.6",
+    "react-native-code-push": "^8.2.2",
     "react-native-config": "^1.5.1"
   },
   "devDependencies": {

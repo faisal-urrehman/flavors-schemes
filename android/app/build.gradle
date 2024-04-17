@@ -99,14 +99,17 @@ android {
         production {
             applicationIdSuffix ".production"
             resValue "string", "build_config_package", "com.awesomeproject"
+            resValue "string", "CodePushDeploymentKey", '"9iahrO7spIUD61VCPZmczK2j6mX6aABdVnBXW"'
         } 
         staging {
             applicationIdSuffix ".staging"
             resValue "string", "build_config_package", "com.awesomeproject"
+            resValue "string", "CodePushDeploymentKey", '"WlH8vgO4wBavkkyDAk1F17idPfmkevi9zLjB4"'
         }
         dev {
             applicationIdSuffix ".dev"
             resValue "string", "build_config_package", "com.awesomeproject"
+            resValue "string", "CodePushDeploymentKey", '""'
         }
     }
     signingConfigs {
@@ -144,3 +147,4 @@ dependencies {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"

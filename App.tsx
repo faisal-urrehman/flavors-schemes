@@ -5,6 +5,7 @@
  * @format
  */
 
+import messaging from '@react-native-firebase/messaging';
 import React, {useEffect} from 'react';
 import {
   PermissionsAndroid,
@@ -15,9 +16,13 @@ import {
   useColorScheme,
 } from 'react-native';
 import Config from 'react-native-config';
-import messaging from '@react-native-firebase/messaging';
 
+import codePush from 'react-native-code-push';
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+
+let codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+};
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -50,9 +55,9 @@ function App(): React.JSX.Element {
         style={backgroundStyle}>
         <Header />
       </ScrollView>
-      <Text>Hello {Config.ENV}</Text>
+      <Text>Only for prod: {Config.ENV}</Text>
     </SafeAreaView>
   );
 }
 
-export default App;
+export default codePush(codePushOptions)(App);
